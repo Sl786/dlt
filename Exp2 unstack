@@ -1,0 +1,25 @@
+#Unstack
+
+import tensorflow as tf
+
+# Generate a random tensor
+
+x = tf.random.normal([3, 2, 3])
+
+print("Original Tensor (x):")
+
+print(x)
+
+# Unstack the tensor along axis 0
+
+result = tf.unstack(x, axis=0)
+
+print("\nUnstacked Tensors:")
+
+# Display each unstacked tensor
+
+for idx, tensor in enumerate(result):
+
+print(f"Tensor {idx + 1}:")
+
+print(tensor)

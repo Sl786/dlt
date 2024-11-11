@@ -1,0 +1,27 @@
+#SPLIT OPERATION:
+
+#Split
+
+import tensorflow as tf
+
+# Generate a random tensor
+
+x = tf.random.normal([3, 2, 3])
+
+print("Original Tensor (x):")
+
+print(x)
+
+# Split the tensor into 3 parts along axis 0
+
+result = tf.split(x, axis=0, num_or_size_splits=3)
+
+print("\nSplit Tensors:")
+
+# Display each split tensor
+
+for idx, tensor in enumerate(result):
+
+print(f"Tensor {idx + 1}:")
+
+print(tensor)

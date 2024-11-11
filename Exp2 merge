@@ -1,0 +1,19 @@
+import tensorflow as tf
+
+# MERGE OPERATION:
+
+# Generate random tensors
+
+a = tf.random.normal([1, 2, 3]) # Shape: (1, 2, 3)
+
+b = tf.random.normal([2, 2, 3]) # Shape: (2, 2, 3)
+
+# Concatenate tensors along the first axis (axis=0)
+
+c = tf.concat([a, b], axis=0)
+
+# Print the resulting tensor
+
+print(c)
+
+# Output format: tensor values, shape, and data type
